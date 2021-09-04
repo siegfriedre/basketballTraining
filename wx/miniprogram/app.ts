@@ -1,4 +1,4 @@
-import {  getUserProfile } from "./utils/util"
+
 
 let resolveUserInfo : (value: WechatMiniprogram.UserInfo | PromiseLike<WechatMiniprogram.UserInfo>) => void
 let rejectUserInfo : (reason?: any) => void
@@ -27,6 +27,7 @@ App<IAppOption>({
       resolveUserInfo = resolve
       rejectUserInfo = reject
     }),
+    openId: '',
   },
   onLaunch() {
     // 展示本地存储能力
@@ -37,7 +38,7 @@ App<IAppOption>({
     // 登录
     wx.login({
       success: res => {
-        console.log(res.code)
+        console.log('rescode:'+res.code)
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
       },
     })

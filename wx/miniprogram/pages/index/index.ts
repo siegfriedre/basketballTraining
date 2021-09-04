@@ -78,5 +78,11 @@ Page({
     }
     
     update()
+  },
+  toRegister(){
+    wx.navigateTo({
+      // url: '../logs/logs',
+      url: '../register/register',
+    })
   }
 })

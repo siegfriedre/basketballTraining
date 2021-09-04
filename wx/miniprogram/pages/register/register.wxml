@@ -1,0 +1,35 @@
+<!--{{page}}.wxml-->
+<view class="container">
+    <form>
+        <view class="cu-form-group">
+            <view class="title">姓 名</view>
+            <input placeholder="请输入姓名" selection-start="-1" selection-end="-1" cursor="-1" bindinput="bindInputUserName" value="{{userName}}" ></input>
+        </view>
+        <view class="cu-form-group">
+            <view class="title">学 时</view>
+            <input placeholder="请输入学时" selection-start="-1" selection-end="-1" cursor="-1" bindinput="bindInputStudyTime" value="{{studyTime}}"   ></input>
+        </view>
+        <!-- <view class="cu-form-group">
+            <view class="title">学 时</view>
+            <input placeholder="请输入学时" selection-start="-1" selection-end="-1" cursor="-1"  ></input>
+        </view> -->
+        <view class="cu-form-group">
+            <view class="title">手机号码</view>
+            <input selection-start="-1" selection-end="-1" cursor="-1" bindinput="bindInputPhone" value="{{phone}}" ></input>
+            <view class="cu-capsule radius">
+                <view class="cu-tag bg-blue">+86</view>
+                <view class="cu-tag line-blue">中国大陆</view>
+            </view>
+        </view>
+        <view class="cu-form-group" >
+            <view class="title">性 别</view>
+            <switch bindchange="bindInputSex" class="switch-sex" />
+        </view>
+        <view style="display: flex">
+            <button class="cu-btn bg-green margin-tb-sm lg " role="button" aria-disabled="flase" bindtap="register">
+                提交
+            </button>
+        </view>
+        
+    </form>
+</view>

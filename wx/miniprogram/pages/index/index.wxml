@@ -20,4 +20,5 @@
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
+  <button bindtap="toRegister">注册</button>
 </view>
